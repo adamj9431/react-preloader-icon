@@ -3,6 +3,7 @@ import objectAssign from 'object-assign';
 import {inner, title} from './styles';
 import Oval from './loaders/Oval';
 import TailSpin from './loaders/TailSpin';
+import Puff from './loaders/Puff';
 
 /**
  * @type {object}
@@ -11,7 +12,8 @@ import TailSpin from './loaders/TailSpin';
  */
 const ICON_TYPE = {
     OVAL: 'oval',
-    TAIL_SPIN: 'tailSpin'
+    TAIL_SPIN: 'tailSpin',
+    PUFF: 'puff'
 };
 
 class PreloaderIcon extends React.Component {
@@ -83,6 +85,8 @@ class PreloaderIcon extends React.Component {
                 return <Oval {...options}/>;
             case ICON_TYPE.TAIL_SPIN:
                 return <TailSpin {...options}/>;
+            case ICON_TYPE.PUFF:
+                return <Puff {...options}/>;
             default:
                 return null;
         }
